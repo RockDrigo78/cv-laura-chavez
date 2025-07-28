@@ -29,6 +29,7 @@ const WorkExperience: React.FC = () => (
               height: { xs: 56, sm: 64 },
               flexShrink: 0,
               alignSelf: { xs: "center", sm: "flex-start" },
+              objectFit: "contain",
             }}
           />
           <Box sx={{ flex: 1 }}>

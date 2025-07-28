@@ -33,12 +33,16 @@ const PersonalInfo: React.FC = () => (
         <Typography variant="body1">{personalInfo.address}</Typography>
         <Typography variant="body1">{personalInfo.phone}</Typography>
         <Typography variant="body1">{personalInfo.email}</Typography>
-        <Typography variant="body2" color="text.secondary">
-          Fecha de nacimiento: {personalInfo.dob}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Nacionalidad: {personalInfo.nationality}
-        </Typography>
+        {personalInfo.dob.length > 0 && (
+          <Typography variant="body2" color="text.secondary">
+            Fecha de nacimiento: {personalInfo.dob}
+          </Typography>
+        )}
+        {personalInfo.nationality && (
+          <Typography variant="body2" color="text.secondary">
+            Nacionalidad: {personalInfo.nationality}
+          </Typography>
+        )}
       </Stack>
     </Box>
   </Box>
