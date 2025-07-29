@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Stack, Chip } from "@mui/material";
-import { languages, techSkills } from "./cvData";
+import { languages, techSkills } from "../data/cvData";
 
 const Skills: React.FC = () => (
   <Box sx={{ mb: 3 }}>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Avatar, Stack } from "@mui/material";
-import { personalInfo } from "./cvData";
+import { personalInfo } from "../data/cvData";
 
 const PersonalInfo: React.FC = () => (
   <Box
@@ -30,16 +30,22 @@ const PersonalInfo: React.FC = () => (
         {personalInfo.name}
       </Typography>
       <Stack spacing={0.5} sx={{ mt: 1 }}>
-        <Typography variant="body1">{personalInfo.address}</Typography>
-        <Typography variant="body1">{personalInfo.phone}</Typography>
-        <Typography variant="body1">{personalInfo.email}</Typography>
+        <Typography variant="body1" color="text.secondary">
+          Dirección: {personalInfo.address}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Teléfono: {personalInfo.phone}
+        </Typography>
+        <Typography variant="body1" color="text.secondary">
+          Correo electrónico: {personalInfo.email}
+        </Typography>
         {personalInfo.dob.length > 0 && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body1" color="text.secondary">
             Fecha de nacimiento: {personalInfo.dob}
           </Typography>
         )}
         {personalInfo.nationality && (
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body1" color="text.secondary">
             Nacionalidad: {personalInfo.nationality}
           </Typography>
         )}

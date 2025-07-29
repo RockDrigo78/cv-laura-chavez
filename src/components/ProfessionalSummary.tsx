@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { professionalSummary } from "./cvData";
+import { professionalSummary } from "../data/cvData";
 
 const ProfessionalSummary: React.FC = () => (
   <Box sx={{ mb: 3 }}>

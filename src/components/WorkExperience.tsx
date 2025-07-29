@@ -1,6 +1,14 @@
 import React from "react";
-import { Box, Typography, Avatar, Paper, Stack } from "@mui/material";
-import { experiences } from "./cvData";
+import {
+  Box,
+  Typography,
+  Avatar,
+  Paper,
+  Stack,
+  List,
+  ListItem,
+} from "@mui/material";
+import { experiences } from "../data/cvData";
 
 const WorkExperience: React.FC = () => (
   <Box sx={{ mb: 3 }}>
@@ -29,7 +37,9 @@ const WorkExperience: React.FC = () => (
               height: { xs: 56, sm: 64 },
               flexShrink: 0,
               alignSelf: { xs: "center", sm: "flex-start" },
-              objectFit: "contain",
+              img: {
+                objectFit: "contain",
+              },
             }}
           />
           <Box sx={{ flex: 1 }}>
@@ -42,7 +52,15 @@ const WorkExperience: React.FC = () => (
             <Typography variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
               {exp.dates}
             </Typography>
-            <Typography variant="body2">{exp.description}</Typography>
+            <List>
+              {exp.description?.map((desc, i) => (
+                <ListItem key={i}>
+                  <Typography variant="body2" sx={{ mb: 0.5 }}>
+                    {desc}
+                  </Typography>
+                </ListItem>
+              ))}
+            </List>
           </Box>
         </Paper>
       ))}

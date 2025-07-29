@@ -5,6 +5,8 @@ import ProfessionalSummary from "./ProfessionalSummary";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
+import Courses from "./Courses";
+import Achievements from "./Achievements";
 
 const CV: React.FC = () => (
   <Box
@@ -26,6 +28,8 @@ const CV: React.FC = () => (
       <ProfessionalSummary />
       <WorkExperience />
       <Education />
+      <Courses />
+      <Achievements />
       <Skills />
     </Paper>
   </Box>

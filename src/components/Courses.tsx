@@ -1,17 +1,20 @@
 import React from "react";
 import { Box, Typography, Stack } from "@mui/material";
-import { education } from "../data/cvData";
+import { courses } from "../data/cvData";
 
-const Education: React.FC = () => (
+const Courses: React.FC = () => (
   <Box sx={{ mb: 3 }}>
     <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-      Formación académica
+      Cursos de especialización
     </Typography>
     <Stack spacing={1.5}>
-      {education.map((edu, idx) => (
+      {courses.map((edu, idx) => (
         <Box key={idx}>
-          <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
-            {edu.degree}
+          <Typography
+            variant="subtitle1"
+            sx={{ fontWeight: 500, textTransform: "uppercase" }}
+          >
+            {edu.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {edu.institution}
@@ -25,4 +28,4 @@ const Education: React.FC = () => (
   </Box>
 );
 
-export default Education;
+export default Courses;
