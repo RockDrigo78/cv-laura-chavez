@@ -10,10 +10,7 @@ const Courses: React.FC = () => (
     <Stack spacing={1.5}>
       {courses.map((edu, idx) => (
         <Box key={idx}>
-          <Typography
-            variant="subtitle1"
-            sx={{ fontWeight: 500, textTransform: "uppercase" }}
-          >
+          <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>
             {edu.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
