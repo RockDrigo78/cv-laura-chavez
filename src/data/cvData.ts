@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "María Laura Chávez Arana",
   address: "Calle Ing. Vargas Machuca, 5, 11100 San Fernando, Cádiz, España",
   phone: "671904472",
-  email: "laura.chavez@email.com",
+  email: "maria.laura.chavez188@gmail.com",
   dob: "11/09/1988",
   nationality: "Española / Peruana",
   photo: "LauraChavez.png",
